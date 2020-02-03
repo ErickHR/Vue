@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    .error {
+        color: red;
+    }
+    .no_error{
+        color:blue;
+    }
+</style>
+
+<body>
+
+    <div id="app">
+        <p :class = "{error:p_error, no_error:!p_error}">V_bind</p>
+        <p :class = "{error:!p_error, no_error:p_error}">!V_bind</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
