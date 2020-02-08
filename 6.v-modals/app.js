@@ -5,7 +5,8 @@ let app = new Vue({
         numero : 13,
         cant : 0,
         mensaje:'', 
-        error:true
+        error:true,
+        placeText:'apellido'
     },
     computer : {
         
