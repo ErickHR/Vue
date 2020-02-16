@@ -4,6 +4,10 @@ const router = new VueRouter({
         {
             path:'/lists',
             component:Lists
+        },
+        {
+            path:'/listsPrograming',
+            component:listPrograming
         }
     ]
 })
