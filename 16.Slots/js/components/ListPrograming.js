@@ -9,7 +9,8 @@ const listPrograming = {
     `,
     data:function(){
         return{
-            lenguajes:["JavaScript", "Java", "C++"]
+            lenguajes:["JavaScript", "Java", "C++"],
+            texto:''
         }
     }
 }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    .error {
+        color: red;
+    }
+
+    .no_error {
+        color: blue;
+    }
+</style>
+<!-- 11.Router y Component -->
+
+<body>
+
+    <div id="app" class="container">
+        <router-link to="/">Home</router-link>
+        <router-link to="/lists">List</router-link>
+        <router-link to="/listsPrograming">Lenguajes Programacion</router-link>
+        <router-link to="/otro-Link">About</router-link>
+
+        <modal-slots>
+            <div slot="titulo">
+                <h5 class="modal-title" id="exampleModalLongTitle">este es un titulo desde el slot</h5>
+            </div>
+            <p>esto es un contenido para el modal-slots</p>
+
+        </modal-slots>
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+            Launch demo modal
+        </button>
+        
+        <router-view></router-view>
+    </div>
+
+    <script type="text/x-template" id="pagNotFind">
+        <div>
+            <h2>Pagina no encontrada</h2>
+        </div>
+    </script>
+
+    <script src="js/components/Lista.js"></script>
+    <script src="js/components/ListPrograming.js"></script>
+    <script src="js/components/ListAlert.js"></script>
+    <script src="js/components/Slots.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -11,11 +11,17 @@ const router = new VueRouter({
         },
         {
             path:'/listsPrograming-new',
-            redirect:'/listsPrograming-new-Other'
+            component:listPrograming
         },
         {
-            path:'/listsPrograming-new-Other',
+            path:'/listsPrograming-new',
             component:listPrograming
+        },
+        {
+            path:'*',
+            component:{
+                template:'#pagNotFind'
+            }
         }
     ]
 })
@@ -23,4 +29,7 @@ const router = new VueRouter({
 let app = new Vue({
     router,
     el : "#app",
+    mounted(){
+        console.log(this.$route)
+    }
 })
